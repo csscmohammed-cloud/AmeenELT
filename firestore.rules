@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAuth() {
+      return request.auth != null;
+    }
+    
+    match /users/{userId} {
+      allow read: if isAuth();
+      allow create: if isAuth() && request.auth.uid == userId;
+      allow update, delete: if isAuth();
+    }
+    
+    match /groups/{groupId} {
+      allow read, write: if isAuth();
+    }
+    
+    match /materials/{materialId} {
+      allow read, write: if isAuth();
+    }
+    
+    match /attempts/{attemptId} {
+      allow read, write: if isAuth();
+    }
+    
+    match /notifications/{notificationId} {
+      allow read, write: if isAuth();
+    }
+    
+    match /files/{fileId} {
+      allow read, write: if isAuth();
+    }
+  }
+}
