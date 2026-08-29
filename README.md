@@ -1,4 +1,4 @@
-# AmeenELT — Modern English Language Teaching & Learning Workspace
+# AmeenELT — Modern English Language Teaching & Learning LMS/ Workspace
 
 **AmeenELT** is an interactive, full-stack English Language Teaching (ELT) workspace designed for educators and learners. It combines structured curriculum management with intelligent AI-powered lesson creation, dynamic quizzes, interactive vocabulary practice, and real-time student evaluation.
 
